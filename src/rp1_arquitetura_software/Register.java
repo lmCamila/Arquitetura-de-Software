@@ -15,9 +15,17 @@ public class Register {
 	
 	public void addNames() 
 	{
-		System.out.println("Digite o nome:");
+            int i=1;
+            do{
+                System.out.println("Digite o nome(Para sair digite 0):");
 		String name = sc.nextLine();
-		names.add(name);
+		
+                if("0".equals(name)){
+                i =  Integer.parseInt(name);
+                }else{
+                    names.add(name);
+                }
+            }while(i != 0);
 	}
 	public void listNames()
 	{
